@@ -37,7 +37,7 @@ version
 # COMMAND ----------
 
 import mlflow
-
+mlflow.set_registry_uri("databricks")
 pyfunc_model = mlflow.pyfunc.load_model(model_uri=f"models:/{model_name}/{version}")
 
 # COMMAND ----------
